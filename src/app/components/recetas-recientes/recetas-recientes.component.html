@@ -1,0 +1,11 @@
+<div class="d-flex flex-wrap justify-content-center fs-1 my-4">
+    Recetas Recientes
+</div>
+<div class="d-flex flex-wrap gap-1 justify-content-center">
+    <app-card *ngFor="let receta of recetas"
+      title="Ramencito"
+      image="assets/ramen.jpg"
+      hoverImage="assets/ramen.jpg">
+    </app-card>
+  </div>
+  

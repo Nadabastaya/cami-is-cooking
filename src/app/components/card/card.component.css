@@ -1,0 +1,12 @@
+.transition-opacity {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .transition-all {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .object-fit-cover {
+    object-fit: cover;
+  }
+  

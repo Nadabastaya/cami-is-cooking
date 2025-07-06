@@ -1,0 +1,10 @@
+.custom-btn {
+    background-color: #4CAF50; /* Verde personalizado */
+    color: white;
+    border-color: #4CAF50;
+}
+
+.custom-btn:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+    border-color: #45a049;
+}

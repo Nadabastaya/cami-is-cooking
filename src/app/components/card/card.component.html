@@ -1,0 +1,25 @@
+<div class="card position-relative overflow-hidden border-0" style="width: 350px; height: 350px;">
+    <!-- Imagen normal -->
+    <img [src]="image" class="img-fluid w-100 h-100 object-fit-cover position-absolute start-0 top-0 transition-opacity" 
+         [class.opacity-0]="isHovered" 
+         (mouseenter)="isHovered = true" 
+         (mouseleave)="isHovered = false">
+    
+    <!-- Imagen en hover -->
+   <!--  <img [src]="hoverImage" class="img-fluid w-100 h-100 object-fit-cover position-absolute start-0 top-0 opacity-0 transition-opacity" 
+         [class.opacity-100]="isHovered"> -->
+    
+    <!-- Título -->
+    <div class="card-title position-absolute bottom-0 start-0 bg-dark bg-opacity-50 text-white px-2 py-1">
+      {{ title }}
+    </div>
+  
+    <!-- Animación "Ver Receta" -->
+    <div class="position-absolute bottom-0 end-0 bg-dark text-white p-2 rounded shadow-sm 
+                translate-middle opacity-0 transition-all" 
+         [class.opacity-100]="isHovered" 
+         [class.translate-middle]="!isHovered">
+      Ver Receta
+    </div>
+  </div>
+  
