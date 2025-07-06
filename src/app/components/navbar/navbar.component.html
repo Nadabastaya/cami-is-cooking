@@ -1,22 +1,35 @@
-<nav class="navbar navbar-expand-lg navbar-black bg-white">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Cami is Cooking</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/recetas">Recetas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/blog">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/contact">Contacto</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Cami is Cooking</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/recetas">Recetas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contacto</a>
+        </li>
+        <li class="nav-item ms-3">
+          <!-- Icono de lupa -->
+          <button class="btn btn-link text-dark p-0" (click)="toggleSearch()">
+            <i class="fas fa-search"></i>
+          </button>
+        </li>
+      </ul>
+
+      <!-- Input de búsqueda -->
+      <form class="d-flex ms-3" *ngIf="showSearch">
+        <input class="form-control" type="search" placeholder="Buscar..." [(ngModel)]="searchQuery" name="search" />
+      </form>
+    </div>
+  </div>
 </nav>
